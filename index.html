@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Memory Game</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body class="w-100 h-100">
+<aside class="mx-auto">
+    <div class="d-flex justify-content-center">
+        <h2 class="justify-content-center">Wait, who was that Pokémon?</h2>
+    </div>
+    <div class="d-flex justify-content-center"> <p>Pairs found: <span id="counter"></span></p></div>
+</aside>
+<section class="w-100 h-100">
+<div class="container h-100 w-100">
+    <div class="row w-100 h-100  row-no-padding memory-game d-flex justify-content-center">
+        <div class="img-0 col-md-2 col-sm-4 flip-card" data-framework="1">
+            <img src="./assets/img/ball.png"  class="flip-front text-center" alt="ball">
+            <img src="./assets/img/1.jpg" class="flip-back" alt="">
+        </div>
+        <div class="img-0 col-md-2  col-sm-4  flip-card" data-framework="1">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/1.jpg" class="flip-back" alt="">
+        </div>
+        <div class="img-2 col-md-2   col-sm-4 flip-card" data-framework="2">
+                <img src="./assets/img/ball.png"  class="flip-front" alt="ball">
+                <img src="./assets/img/2.png"  class="flip-back" alt="">
+        </div>
+        <div class="img-2 col-md-2   col-sm-4 flip-card" data-framework="2">
+                <img src="./assets/img/ball.png"  class="flip-front" alt="ball">
+                <img src="./assets/img/2.png"  class="flip-back" alt="">
+        </div>
+            <div class="img-4 col-md-2   col-sm-4 flip-card" data-framework="3">
+                    <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                    <img src="./assets/img/3.jpg" class="flip-back" alt="">
+            </div>
+        <div class="img-4 col-md-2   col-sm-4 flip-card" data-framework="3">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/3.jpg" class="flip-back"  alt="">
+        </div>
+        <div class="img-6 col-md-2   col-sm-4 flip-card" data-framework="4">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/4.png" class="flip-back"  alt="">
+        </div>
+        <div class="img-6 col-md-2   col-sm-4 flip-card" data-framework="4">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/4.png" class="flip-back"  alt="">
+        </div>
+        <div class="img-8 col-md-2   col-sm-4 flip-card" data-framework="5">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/5.jpg" class="flip-back"  alt="">
+        </div>
+        <div class="img-8 col-md-2   col-sm-4 flip-card" data-framework="5">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/5.jpg" class="flip-back"  alt="">
+        </div>
+        <div class="img-10 col-md-2  col-sm-4 flip-card" data-framework="6">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/6.jpg" class="flip-back"  alt="">
+        </div>
+        <div class="img-10 col-md-2  col-sm-4 flip-card" data-framework="6">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/6.jpg" class="flip-back"  alt="">
+        </div>
+        <div class="img-12 col-md-2  col-sm-4 flip-card" data-framework="7">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/7.png" class="flip-back"  alt="">
+        </div>
+        <div class="img-12 col-md-2  col-sm-4 flip-card" data-framework="7">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/7.png" class="flip-back"  alt="">
+        </div>
+        <div class="img-14 col-md-2  col-sm-4 flip-card" data-framework="8">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/8.jpg" class="flip-back"  alt="">
+        </div>
+        <div class="img-14 col-md-2  col-sm-4 flip-card" data-framework="8">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/8.jpg " class="flip-back"  alt="">
+        </div>
+        <div class="img-14 col-md-2  col-sm-4 flip-card" data-framework="9">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/9.jpg " class="flip-back"  alt="">
+        </div>
+        <div class="img-14 col-md-2  col-sm-4 flip-card" data-framework="9">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/9.jpg " class="flip-back"  alt="">
+        </div>
+        <div class="img-14 col-md-2  col-sm-4 flip-card" data-framework="10">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/10.gif " class="flip-back"  alt="">
+        </div>
+        <div class="img-14 col-md-2  col-sm-4 flip-card" data-framework="10">
+                <img src="./assets/img/ball.png" class="flip-front" alt="ball">
+                <img src="./assets/img/10.gif " class="flip-back"  alt="">
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
