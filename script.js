@@ -9,7 +9,8 @@ function multiMemory() {
     let scoreCounter = 0;
     let scorePlayer1 = 0;
     let scorePlayer2 = 0;
-    document.querySelector('#scoreboard').innerHTML = `<p>Player 1 - Pairs found: <span id="counter1"></span>   Player 2 - Pairs found: <span id="counter2"></span></p>`
+    document.querySelector('#scoreboard').innerHTML = `<p><span class="player text-highlight" id="player1">Player 1 </span> - Pairs found: <span class="player" id="counter1"></span> <span id="player2"> Player 2 </span> - Pairs found: <span id="counter2"></span></p>`
+    let tagPlayer1 = document.querySelector('#player1'); let tagPlayer2 = document.querySelector('#player2');
     let scoreTarget1 = document.querySelector('#counter1'); let scoreTarget2 = document.querySelector('#counter2');
     scoreTarget1.innerHTML = scorePlayer1; scoreTarget2.innerHTML = scorePlayer2;
     let multiplayer = true
@@ -67,6 +68,16 @@ function multiMemory() {
 
     }
 
+    function highlightPlayer() {
+        if (!multiplayer) {
+            tagPlayer1.classList.remove('text-highlight');
+            tagPlayer2.classList.add('text-highlight');
+        } else if (multiplayer) {
+            tagPlayer2.classList.remove('text-highlight');
+            tagPlayer1.classList.add('text-highlight');
+        }
+    }
+
     function unflipCards() {
         lockBoard = true;
 
@@ -76,7 +87,10 @@ function multiMemory() {
 
             resetVariables()
         }, 1500);
-        multiplayer ? multiplayer = false : multiplayer = true;
+        multiplayer = !multiplayer;
+
+        highlightPlayer();
+
     }
 
     function resetVariables() {
@@ -86,6 +100,7 @@ function multiMemory() {
 
 
     (shuffleDivs = () => {
+
         let i=0;
         let random;
         divArray.forEach( div => {

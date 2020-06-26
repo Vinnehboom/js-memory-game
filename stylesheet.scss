@@ -19,9 +19,13 @@ html {
   box-sizing: border-box;
 }
 
+h5 {
+  color: #FFffff;
+}
+
 aside {
   font-family: Pokemon;
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: #FFFF00;
   width:75%;
   background-color: #B22222;
@@ -77,3 +81,5 @@ body {
   transform: rotateX(180deg);
 }
 
+.text-highlight {
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;}
