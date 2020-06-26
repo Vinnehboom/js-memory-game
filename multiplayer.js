@@ -6,7 +6,6 @@ function multiMemory() {
     let song = new Audio('./assets/audio/116-victory (vs trainer).mp3')
     let lockBoard = false;
     let firstCard, secondCard;
-    let scoreCounter = 0;
     let scorePlayer1 = 0;
     let scorePlayer2 = 0;
     document.querySelector('#scoreboard').innerHTML = `<p>Player 1 - Pairs found: <span id="counter1"></span>   Player 2 - Pairs found: <span id="counter2"></span></p>`
@@ -38,11 +37,8 @@ function multiMemory() {
     }
 
     function disableCards() {
-        firstCard.removeEventListener('click', flipCard);
-        secondCard.removeEventListener('click', flipCard);
         resetVariables();
-        scoreCounter++;
-        console.log(scoreCounter);
+
         if (multiplayer) {
             scorePlayer1++;
             scoreTarget1.innerHTML = scorePlayer1;
@@ -51,18 +47,12 @@ function multiMemory() {
             scoreTarget2.innerHTML = scorePlayer2;
         }
 
-        if (scoreCounter === divArray.length/2) {
-            if (scorePlayer1 > scorePlayer2) {
-                song.play();
-                alert('Congratulations player 1! You found the most pairs');
-            } else if (scorePlayer2 > scorePlayer1) {
-                song.play();
-                alert('Congratulations player 2! You found the most pairs');
-            } else if (scorePlayer1 === scorePlayer2) {
-                song.play();
-                alert("Wow, it's a tie! What serious competition!");
-            }
+        firstCard.removeEventListener('click', flipCard);
+        secondCard.removeEventListener('click', flipCard);
 
+        if (scoreCounter === divArray.length/2) {
+            song.play();
+            alert('Congratulations! You have found them all!')
         }
 
     }
@@ -101,13 +91,13 @@ function multiMemory() {
     divArray.forEach(card => card.addEventListener('click', flipCard))
     divArray.forEach(card => card.addEventListener('click', function () {
 
-            let cryNumber = this.dataset.framework;
-            let audioFile = cryNumber + ".mp3";
-            if (this.classList.contains('flip'))  {
-                let audioSound = new Audio('./assets/audio/' + audioFile);
-                audioSound.play()
-            }
-        })
+        let cryNumber = this.dataset.framework;
+        let audioFile = cryNumber + ".mp3";
+        if (this.classList.contains('flip'))  {
+            let audioSound = new Audio('./assets/audio/' + audioFile);
+            audioSound.play()
+        }
+    })
     );
 }
 
